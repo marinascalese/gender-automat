@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender-Automat</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <img src="images/logo.png" alt="Gender-Automat Logo" class="logo">
+                <h1 class="title">Gender-Automat</h1>
+            </div>
+    
+            <!-- Hamburger-Menü Icon (nur auf Mobilgeräten sichtbar) -->
+            <div class="hamburger-menu" onclick="toggleMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+    
+            <!-- Navigation (wird auf Mobilgeräten versteckt) -->
+            <nav class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#">Bewerbung</a></li>
+                    <li><a href="#">Arztbesuch</a></li>
+                    <li><a href="#">Studium</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <main>
+        <label for="gender-style">Gender-Stil:</label>
+        <select id="gender-style">
+            <option value="*">*</option>
+            <option value=":">:</option>
+            <option value="_">_</option>
+        </select>
+
+        <section class="content" id="bewerbung">
+            <h1>Anleitung: Bewerbung</h1>
+            <p class="gender-text">Der Bewerber bringt seine Unterlagen mit.</p>
+            <button onclick="gendern(this)">Text gendern</button>
+        </section>
+
+        <section class="content" id="arztbesuch">
+            <h2>Anleitung: Arztbesuch</h2>
+            <p class="gender-text">Der Patient besucht den Arzt.</p>
+            <button onclick="gendern(this)">Text gendern</button>
+        </section>
+
+        <section class="content" id="studium">
+            <h3>Anleitung: Studium</h3>
+            <p class="gender-text">Der Student muss sich für seine Prüfungen anmelden. Der Professor erklärt die Vorlesungsinhalte.</p>
+            <button onclick="gendern(this)">Text gendern</button>
+        </section>
+
+        <button class="full-width-button" onclick="gendernAlle()">Alle Texte gendern</button>
+    </main>
+
+    <footer>
+        <p>© 2025 Gender-Automat | <a href="#">Datenschutz</a> | <a href="#">Impressum</a></p>
+    </footer>
+
+    <script src="scripts/gender-script.js"></script>
+</body>
+</html>
+
